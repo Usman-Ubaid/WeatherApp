@@ -8,7 +8,7 @@ const TimeAndLocation = () => {
       </div>
 
       <div className="text-center my-4">
-        <p className="text-white text-2xl font-semibold">Berlin, DE</p>
+        <p className="text-white text-2xl font-medium">Berlin, DE</p>
       </div>
     </div>
   );
