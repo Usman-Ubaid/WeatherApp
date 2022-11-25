@@ -21,6 +21,11 @@ const Inputs = ({ setQuery, units, setUnits }) => {
     }
   };
 
+  const handleUnitsChange = (e) => {
+    const selectedUnit = e.currentTarget.name;
+    if (units !== selectedUnit) setUnits(selectedUnit);
+  };
+
   return (
     <div className="flex justify-between items-center my-6 ">
       <div className="flex justify-start items-center gap-x-3 w-3/4 ">
@@ -43,11 +48,19 @@ const Inputs = ({ setQuery, units, setUnits }) => {
         />
       </div>
       <div className="flex justify-end items-center gap-2 w-1/4 text-slate-100 font-normal text-lg">
-        <button name="metric" className="transition ease-out hover:scale-125">
+        <button
+          name="metric"
+          className="transition ease-out hover:scale-125"
+          onClick={handleUnitsChange}
+        >
           °C
         </button>
         <p>|</p>
-        <button name="imperial" className="transition ease-out hover:scale-125">
+        <button
+          name="imperial"
+          className="transition ease-out hover:scale-125"
+          onClick={handleUnitsChange}
+        >
           °F
         </button>
       </div>
