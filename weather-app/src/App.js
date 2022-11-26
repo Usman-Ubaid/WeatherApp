@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Inputs from "./components/Inputs";
 import TemperatureAndDetails from "./components/TemperatureAndDetails";
@@ -13,9 +15,16 @@ function App() {
 
   useEffect(() => {
     const fetchWeatherData = async () => {
-      await formattedWeatherData({ ...query, units }).then((data) =>
-        setWeather(data)
-      );
+      const message = query.q ? query.q : "current location";
+
+      toast.info("Fetching weather for " + message);
+
+      await formattedWeatherData({ ...query, units }).then((data) => {
+        toast.success(
+          `Successfully fetched weather for ${data.name}, ${data.country}`
+        );
+        setWeather(data);
+      });
     };
     fetchWeatherData();
   }, [query, units]);
@@ -44,6 +53,8 @@ function App() {
           <TemperatureAndDetails weather={weather} />
         </div>
       )}
+
+      <ToastContainer autoClose={3000} theme="colored" newestOnTop={true} />
     </div>
   );
 }
