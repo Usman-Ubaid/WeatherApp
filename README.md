@@ -1,5 +1,4 @@
 # Front-end Weather Application
-
 Front-end Web app built with React.
 
 > Weather app built with React, TailwindCSS using luxon, react-toastify, iconscout libraries, and Web APIs (Fetch API, Navigator.geolocation API)
