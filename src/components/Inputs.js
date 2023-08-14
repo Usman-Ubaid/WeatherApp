@@ -33,7 +33,7 @@ const Inputs = ({ setQuery, units, setUnits }) => {
           value={city}
           type="text"
           placeholder="Search a city..."
-          className="outline-none p-1.5 text-base w-full capitalize placeholder:lowercase"
+          className="outline-none p-1.5 rounded text-base w-full capitalize placeholder:lowercase"
           onChange={(e) => setCity(e.currentTarget.value)}
         />
         <UilSearch

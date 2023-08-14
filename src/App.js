@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./App.css";
 import Inputs from "./components/Inputs";
 import TemperatureAndDetails from "./components/TemperatureAndDetails";
 import TimeAndLocation from "./components/TimeAndLocation";
@@ -40,7 +39,7 @@ function App() {
 
   return (
     <div
-      className={`mx-auto max-w-screen-md mt-4 py-5 px-32 h-fit 
+      className={`mx-auto h-screen pt-32 px-64  
     bg-gradient-to-br ${changeBackgroundColor()} 
     shadow-xl shadow-gray-500`}
     >
