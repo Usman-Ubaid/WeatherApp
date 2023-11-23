@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div
-      className={`mx-auto h-screen pt-32 px-64  
+      className={`mx-auto h-screen pt-32 px-16 md:px-32 xl:px-64  
     bg-gradient-to-br ${changeBackgroundColor()} 
     shadow-xl shadow-gray-500`}
     >

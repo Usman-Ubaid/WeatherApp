@@ -8,3 +8,9 @@
     font-family: Poppins;
   }
 }
+
+@media (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+}
